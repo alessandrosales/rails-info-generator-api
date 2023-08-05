@@ -1,0 +1,30 @@
+---
+openapi: 3.0.1
+info:
+  title: INFO GENERATOR V1
+  version: v1
+paths:
+  "/api/v1/addresses":
+    get:
+      summary: Get a full address
+      tags:
+      - Address
+      responses:
+        '200':
+          description: Address returned successfully
+          content:
+            application/json:
+              examples:
+                example:
+                  value:
+                    street: Marginal Luiz Felipe
+                    number: '7204'
+                    zipcode: 21926-291
+                    neighbourhood: Itaim Bibi
+                    city: Buriti dos Montes
+                    state: PR
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: 127.0.0.1:3000
