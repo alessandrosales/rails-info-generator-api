@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'addresses', to: 'addresses#index'
+      get 'documents/cpf', to: 'documents#cpf'
+      get 'documents/cnpj', to: 'documents#cnpj'
     end
   end
 end
