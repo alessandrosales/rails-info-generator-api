@@ -23,6 +23,34 @@ paths:
                     neighbourhood: Itaim Bibi
                     city: Buriti dos Montes
                     state: PR
+  "/api/v1/documents/cpf":
+    get:
+      summary: Get a random CPF
+      tags:
+      - Document
+      responses:
+        '200':
+          description: CPF returned successfully
+          content:
+            application/json:
+              examples:
+                example:
+                  value:
+                    cpf: 287.822.271-79
+  "/api/v1/documents/cnpj":
+    get:
+      summary: Get a random CNPJ
+      tags:
+      - Document
+      responses:
+        '200':
+          description: CNPJ returned successfully
+          content:
+            application/json:
+              examples:
+                example:
+                  value:
+                    cnpj: 38.108.052/0722-22
 servers:
 - url: http://{defaultHost}
   variables:
